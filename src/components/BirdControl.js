@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import BirdForm from './BirdForm';
 import BirdList from './BirdList';
+import Button from 'react-bootstrap/Button';
 
 class BirdControl extends React.Component {
 
@@ -34,18 +35,18 @@ class BirdControl extends React.Component {
 
   render(){
     let currentlyVisibleState = null;
-    let buttonText = null;
+    let button = null;
     if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <BirdForm onNewBirdCreation={this.handleAddingNewBirdToList} />
-      buttonText = "Return to Bird List";
+      button = null;
     } else {
       currentlyVisibleState = null;
-      buttonText = "Add Bird";
+      button = <Button variant="outline-info" onClick={this.handleClick}>Add Bird</Button>
     }
     return (
       <React.Fragment>
         <Row>
-          <Col><BirdList birdList={this.state.mainBirdList} /> <button onClick={this.handleClick}>{buttonText}</button></Col>
+          <Col><BirdList birdList={this.state.mainBirdList} /> {button} </Col>
           <Col>{currentlyVisibleState}</Col>
         </Row>
 

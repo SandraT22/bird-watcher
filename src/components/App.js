@@ -4,7 +4,7 @@ import BirdControl from "./BirdControl";
 import { Container } from "react-bootstrap";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 // import BirdForm from './BirdForm';
 // import BirdList from './BirdList';
 

@@ -2,7 +2,7 @@ import React from "react";
 
 function Header(){
   return (
-    <h1>Bird Watcher</h1>
+    <img className="mt-3" src="https://raw.githubusercontent.com/GarrettHays/images/main/My%20project-1%20(2).png" width="400" />
   );
 }
 
